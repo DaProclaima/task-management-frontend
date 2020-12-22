@@ -41,7 +41,7 @@ class SignInPage extends Component {
       await this.props.userStore.signin(username, password);
       this.props.routerStore.push('/tasks');
     } catch (error) {
-      const errorMessage = error.response.data.message;
+      const errorMessage = error.message;
       this.setState({ errorMessage });
     }
   };
@@ -58,7 +58,7 @@ class SignInPage extends Component {
         <FormContainer>
           <Heading>Hello!</Heading>
           <p>Fill in your username and password to sign in.</p>
-          
+
           {errorMessage && <ErrorMessage message={this.state.errorMessage} />}
 
           <div>
