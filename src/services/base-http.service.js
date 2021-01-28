@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 let url;
-if( process.env.NODE_ENV === 'production') url = 'http://nestjstaskmanager-env.eba-wgxibqkb.eu-west-3.elasticbeanstalk.com/'
+if( process.env.NODE_ENV === 'production') url = 'https://nestjstaskmanager-env.eba-wgxibqkb.eu-west-3.elasticbeanstalk.com/'
 export default class BaseHttpService {
   BASE_URL = url || 'http://localhost:3000';
   _accessToken = null;
